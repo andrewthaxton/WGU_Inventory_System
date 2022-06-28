@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Controller.AddPartController">
+   <children>
+      <Label fx:id="addPartLabel" layoutX="42.0" layoutY="39.0" text="Add Part">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="inHouseRadio" layoutX="151.0" layoutY="51.0" mnemonicParsing="false" onAction="#onInHouseRadio" selected="true" text="In-House">
+         <toggleGroup>
+            <ToggleGroup fx:id="outsourcedToggle" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="outsourcedRadio" layoutX="365.0" layoutY="51.0" mnemonicParsing="false" onAction="#onOutsourcedRadio" text="Outsourced" toggleGroup="$outsourcedToggle" />
+      <Label fx:id="partIDLabel" layoutX="58.0" layoutY="101.0" text="ID" />
+      <TextField fx:id="partIDTextbox" disable="true" layoutX="151.0" layoutY="97.0" text="Auto Gen- Disabled">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </TextField>
+      <Label fx:id="partNameLabel" layoutX="56.0" layoutY="135.0" text="Name" />
+      <Label fx:id="partInvLabel" layoutX="56.0" layoutY="171.0" text="Inv" />
+      <Label fx:id="partPriceCostLabel" layoutX="55.0" layoutY="204.0" text="Price/Cost" />
+      <Label fx:id="partMaxLabel" layoutX="53.0" layoutY="239.0" text="Max" />
+      <Label fx:id="machCompLabel" layoutX="52.0" layoutY="275.0" text="Machine ID" />
+      <TextField fx:id="partNameTextbox" layoutX="151.0" layoutY="131.0" />
+      <TextField fx:id="partInvTextbox" layoutX="151.0" layoutY="167.0" />
+      <TextField fx:id="partPriceCostTextbox" layoutX="151.0" layoutY="200.0" />
+      <TextField fx:id="partMaxTextbox" layoutX="151.0" layoutY="235.0" />
+      <TextField fx:id="machCompTextbox" layoutX="151.0" layoutY="271.0" />
+      <Label fx:id="partMinLabel" layoutX="351.0" layoutY="239.0" text="Min" />
+      <TextField fx:id="partMinTextbox" layoutX="407.0" layoutY="235.0" />
+      <Button fx:id="partSaveButton" layoutX="325.0" layoutY="327.0" mnemonicParsing="false" onAction="#onPartSaveButton" text="Save" />
+      <Button fx:id="partCancelButton" layoutX="396.0" layoutY="327.0" mnemonicParsing="false" onAction="#onPartCancelButton" text="Cancel" />
+   </children>
+</AnchorPane>
